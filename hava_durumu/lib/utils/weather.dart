@@ -194,7 +194,7 @@ class WeatherData{
           size: 75.0,
           color: Colors.white,
         ),
-            weatherImage: AssetImage('assets/kar1.jpg'));
+            weatherImage: AssetImage('assets/kar4.jpg'));
       }
     }
     else if(currentCondition == 'Rain'){
@@ -236,7 +236,7 @@ class WeatherData{
         size: 75.0,
         color: Colors.white,
       ),
-          weatherImage: AssetImage('assets/fog.jpg'));
+          weatherImage: AssetImage('assets/sis.jpg'));
     }
     else if(currentCondition == 'Clear'){
       // gece gündüz kontrolü
