@@ -229,6 +229,15 @@ class WeatherData{
             weatherImage: AssetImage('assets/bulutlu.jpg'));
       }
     }
+    else if(currentCondition == 'Fog'){
+      // sisli
+      return WeatherDisplayData(weatherIcon: Icon(
+        FontAwesomeIcons.eye,
+        size: 75.0,
+        color: Colors.white,
+      ),
+          weatherImage: AssetImage('assets/fog.jpg'));
+    }
     else if(currentCondition == 'Clear'){
       // gece gündüz kontrolü
       var now = new DateTime.now();
