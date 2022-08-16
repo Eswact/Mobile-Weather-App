@@ -1,7 +1,5 @@
 # mobile-weather-app-with-flutter
 
-Hava durumu mobil uygulaması
-
 Splash_screen
 
 ![splash_screen](https://user-images.githubusercontent.com/100150429/184880188-c60beecf-1193-4ce8-93c5-b046590f1e90.jpg)
