@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hava_durumu/screens/loading_screen.dart';
-import 'package:hava_durumu/screens/main_screen.dart';
-import 'package:hava_durumu/screens/selection_screen.dart';
 import 'package:hava_durumu/screens/splash_screen.dart';
 
 void main() {
@@ -18,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Hava Durumu',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

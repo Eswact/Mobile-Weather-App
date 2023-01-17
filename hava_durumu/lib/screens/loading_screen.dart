@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:hava_durumu/screens/main_screen.dart';
@@ -7,11 +5,6 @@ import 'package:hava_durumu/utils/location.dart';
 import 'package:hava_durumu/utils/weather.dart';
 
 class LoadingScreen extends StatefulWidget {
-
-  final sayac;
-
-  LoadingScreen(this.sayac);
-
 
   @override
   _LoadingScreenState createState() => _LoadingScreenState();
@@ -37,7 +30,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void getWeatherData() async{
     await getLocationData();
 
-    WeatherData weatherData = WeatherData(locationData: locationData, sayac: widget.sayac);
+    WeatherData weatherData = WeatherData(locationData: locationData);
     await weatherData.getCurrentTemperature();
 
     if(weatherData.currentTemperature == null|| weatherData.currentCondition == null){
@@ -52,7 +45,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getWeatherData();
 
@@ -62,14 +54,14 @@ class _LoadingScreenState extends State<LoadingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [Colors.white, Colors.blue]
           )
         ),
-        child: Center(
+        child: const Center(
           child: SpinKitDualRing(
             color: Colors.white,
             size: 150.0,

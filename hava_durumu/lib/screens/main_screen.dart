@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hava_durumu/utils/weather.dart';
 
 class MainScreen extends StatefulWidget {
@@ -30,7 +29,6 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     updateDisplayInfo(widget.weatherData);
   }
@@ -39,7 +37,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        constraints: BoxConstraints.expand(),
+        constraints: const BoxConstraints.expand(),
         decoration: BoxDecoration(
           image: DecorationImage(
             image: backgroundImage,
@@ -49,24 +47,24 @@ class _MainScreenState extends State<MainScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(height: 40,),
+            const SizedBox(height: 40,),
             Container(
               child:weatherDisplayIcon,
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Center(
               child: Text(city,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 50.0,
                 letterSpacing: -5
               ),
               ),
             ),
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
             Center(
               child: Text('$temperature°',
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.white,
                     fontSize: 80.0,
                     letterSpacing: -5
